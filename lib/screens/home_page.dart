@@ -69,7 +69,7 @@ class HomePage extends StatelessWidget {
               title: const Text('Logout'),
               onTap: () {},
             ),
-            Divider(
+            const Divider(
               color: Colors.black,
               height: 0.5,
             ),
@@ -103,22 +103,24 @@ class HomePage extends StatelessWidget {
           ],
         ),
       ),
-      body: const Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Text(
-              'You have pushed the button this many times:',
-            ),
-            Text(
-              'Second column',
-              style: TextStyle(
-                fontSize: 30.0,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-          ],
-        ),
+      body: Center(
+        child: Image.asset('assets/images/background-3.jpeg'),
+
+        // child: Column(
+        //   mainAxisAlignment: MainAxisAlignment.center,
+        //   children: <Widget>[
+        //     Text(
+        //       'You have pushed the button this many times:',
+        //     ),
+        //     Text(
+        //       'Second column',
+        //       style: TextStyle(
+        //         fontSize: 30.0,
+        //         fontWeight: FontWeight.bold,
+        //       ),
+        //     ),
+        //   ],
+        // ),
       ),
       bottomNavigationBar: BottomNavigationBar(items: const [
         BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
