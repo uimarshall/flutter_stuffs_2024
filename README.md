@@ -88,3 +88,13 @@ The MaterialApp() widget enable us to use the features of the Google Material de
 ## The Scaffold() Widget
 
 > The Scaffold Widget helps us to implement a basic layout for our application; such as Navbar(AppBar), Main body and Footer(BottomNavigation).
+
+## Stateless and Stateful Widgets
+
+> Stateless
+
+In Stateless widget, the state of the widget cannot change overtime, examples are the properties of the widgets and the data, properties are things like background color, the state of the data could be upvotes, likes, dislikes etc. The Stateless widget can contain data, but those data cannot change once the widget is initialized.
+
+> Stateful
+
+The change can state overtime, once the data stored in the widget changes or the properties of the widget(class) changes programmatically. example could be changing the background color of fontStyle based on some criteria due to some click actions etc.

@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
 
-  @override
+  @override // we want to use this build function instead of the one above that we inherited from StatelessWidget
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
