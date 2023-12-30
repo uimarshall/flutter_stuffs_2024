@@ -98,3 +98,42 @@ In Stateless widget, the state of the widget cannot change overtime, examples ar
 > Stateful
 
 The change can state overtime, once the data stored in the widget changes or the properties of the widget(class) changes programmatically. example could be changing the background color of fontStyle based on some criteria due to some click actions etc.
+
+## Container Widget
+
+> The container widget is used as a wrap around other widgets.
+> Container is a widget class that allows you to customize its child widget. Use a Container when you want to add `padding`, `margins`, `borders`, or `background color`, to name some of its capabilities.
+
+For example, a Text widget can be placed in a Container to add margins.
+
+### Used Case for a Container
+
+Use a `Container Widget` for any of the following:
+
+> For a widget or element that needs Styling, e.g. background color or shape(circle) or size constrain, then wrap that widget in a container.
+
+### What a Container Does
+
+It helps you `Compose(create)`, `style` and `position` a widget.
+
+> It creates the child widget first using it's `child` property of a class and then applies styling and constraints using other properties of the container class.
+
+Example below:
+
+```
+class LoadingPage extends StatelessWidget {
+  const LoadingPage({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      color: Colors.blue,
+      child: const Text('Container Loading...'),
+    );
+  }
+}
+```
+
+## Some things to note about the Container Widget
+
+> If you don't wrap the Container in another widget such as the `Scaffold`(map Container as value to the body property of the Scaffold), it will take the full screen of the device.

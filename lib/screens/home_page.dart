@@ -103,8 +103,12 @@ class HomePage extends StatelessWidget {
           ],
         ),
       ),
-      body: Center(
-        child: Image.asset('assets/images/background-3.jpeg'),
+      body: Container(
+        color: Colors.white,
+        child: Image.asset(
+          'assets/images/background-3.jpeg',
+          fit: BoxFit.cover,
+        ),
 
         // child: Column(
         //   mainAxisAlignment: MainAxisAlignment.center,
