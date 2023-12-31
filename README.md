@@ -137,3 +137,53 @@ class LoadingPage extends StatelessWidget {
 ## Some things to note about the Container Widget
 
 > If you don't wrap the Container in another widget such as the `Scaffold`(map Container as value to the body property of the Scaffold), it will take the full screen of the device.
+
+## Stateful Widgets
+
+In a `Stateful` widget, The widget changes its state, once the widget changes its state, it is necessary for the UI to reload in order to effect the changes.
+
+The change of state of the widget, could be change in background color due to some clicks, or change in the value of data stored in the widget.
+
+> This is an example of a stateful widget: a state object separate from the widget tree that can change over time and be shared across multiple widgets.
+
+> For now, you can think of them as widgets that can change their appearance in response to events triggered by user interactions or when they receive data.
+
+> For example, a stateful widget might display a list of items that the user can remove from the screen. When the user removes an item, the widget rebuilds itself and the list of items is updated.
+
+```
+
+class MyWidget extends StatefulWidget {
+  const MyWidget({super.key});
+
+  @override
+  // This is the state that will be created by this widget at runtime.
+  State<MyWidget> createState() => _MyWidgetState();
+}
+
+// So `_MyWidgetState() is the state class for`MyWidget`, and it overrides the createState() method to return a _MyWidgetState() object (defined below).
+
+class _MyWidgetState extends State<MyWidget> {
+  @override
+  Widget build(BuildContext context) {
+    return const Placeholder();
+  }
+}
+
+```
+
+> `_MyWidgetState()` is the private State class for a StatefulWidget. It holds the mutable state for that widget. This class will be passed as a parameter to the StatefulWidget.createState method, and from that point, the framework will refer to the state class whenever it needs to read or update the state of the widget.
+
+`_MyWidgetState()` instantiate the state class `_MyWidgetState` object (class) so created above
+
+> It builds a state object for the `MyWidget`` that we just created, the state object will be passed to the framework(flutter), and the framework calls the build() method of this state object whenever it needs to change the widget's appearance.
+
+> So we have two different classes, the actual widget(`MyWidget`) which creates a state object`(_MyWidgetState)` that is separate from the widget tree and can change over time and be shared across multiple widgets.
+
+> The state object(\_MyWidgetState) is created by the widget(MyWidget) at runtime and passed to the framework, and the framework calls the build() method of this state object whenever it needs to change the widget's appearance.
+
+### So we have 2 classes
+
+1. The Actual Widget which creates a state object
+2. The state object which we can use to store data or define data.
+
+> In the future when we use the MyWidget widget, it will return the widget tree defined in the build method of the state object.
