@@ -2,6 +2,29 @@
 
 This repository is for developing flutter projects from 2024
 
+## General Procedure for Developing an app
+
+Things of what and how you want to implement a feature before writing the code.
+
+> The thought process should be divided into two:
+
+1. The UIUX
+2. What type of data a particular UI will interact with.
+
+> For the UI, ask the following questions:
+>
+> Ask these questions to break the layout down to its basic elements.
+
+1. Can you identify the rows and columns?
+2. Does the layout include a grid?
+3. Are there overlapping elements?
+4. Does the UI need tabs?
+5. What do you need to align, pad, or border?
+
+> For the data to be stored in the UI
+
+1. Ask what type of data is it? Is it an objects, lists, strings etc. This will enable you to know how to model the data
+
 ## Running the app
 
 The app runs in the `lib/main.dart` file.

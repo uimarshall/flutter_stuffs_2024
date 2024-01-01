@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_stuffs_2024/timer/choose_location.dart';
 // import 'package:flutter_stuffs_2024/lists/food_menu_list.dart';
 import 'package:flutter_stuffs_2024/timer/home.dart';
+import 'package:flutter_stuffs_2024/timer/loading.dart';
 // import 'package:flutter_stuffs_2024/profile_card/profile_card.dart';
 // import 'package:flutter_stuffs_2024/screens/loading_page.dart';
 // import 'screens/home_page.dart';
@@ -19,6 +21,15 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       home: Home(),
+      initialRoute:
+          '/home', // default route to the home page, the first page that will be displayed when the app is launched
+      // routing (routes are Maps and the keys are the route names and the values are the Screens we want to navigate to)
+      // 'context' helps us to keep track of where we are in the widget tree
+      routes: {
+        // '/': (context) => Loading(),
+        // '/home': (context) => const Home(),
+        // '/location': (context) => const ChooseLocation(),
+      },
     );
   }
 }
