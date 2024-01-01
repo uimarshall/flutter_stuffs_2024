@@ -21,7 +21,7 @@ class _FoodMenuListState extends State<FoodMenuList> {
   ];
 
   // Create delete function
-  void delete(menu) {
+  void delete(MenuItem menu) {
     setState(() {
       foodMenu.remove(menu);
     });
