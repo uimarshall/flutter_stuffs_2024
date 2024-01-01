@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_stuffs_2024/lists/menu_item.dart';
+import 'package:flutter_stuffs_2024/lists/menu_list_card.dart';
 
 class FoodMenuList extends StatefulWidget {
   const FoodMenuList({Key? key}) : super(key: key);
@@ -16,39 +17,20 @@ class _FoodMenuListState extends State<FoodMenuList> {
     MenuItem(title: 'Snacks', reviews: 'Sumptuous tasty meals'),
     MenuItem(title: 'Dessert', reviews: 'Nice delicacies'),
     MenuItem(title: 'Drinks', reviews: 'Great Tastes good'),
-    MenuItem(title: 'Eba', reviews: 'Great Tastes from africa'),
+    MenuItem(title: 'Beans', reviews: 'Great Tastes from africa'),
   ];
 
-// Create a function to output lists
+  // Create delete function
+  void delete(menu) {
+    setState(() {
+      foodMenu.remove(menu);
+    });
+  }
+
+// Create a function to output lists, after cycling through the list of items
 
   Widget menuListTemplate(food) {
-    return Card(
-      margin: const EdgeInsets.fromLTRB(16.0, 16.0, 16.0, 0),
-      child: Padding(
-        padding: const EdgeInsets.all(12.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          // crossAxisAlignment: CrossAxisAlignment.start,
-          children: <Widget>[
-            Text(
-              food.title,
-              style: const TextStyle(
-                fontSize: 18.0,
-                color: Color(0xFF004D40),
-              ),
-            ),
-            const SizedBox(height: 6.0),
-            Text(
-              food.reviews,
-              style: const TextStyle(
-                fontSize: 14.0,
-                color: Colors.grey,
-              ),
-            ),
-          ],
-        ),
-      ),
-    );
+    return MenuCardWidget(food: food, delete: delete);
   }
 
   Widget menuList(menu) {
@@ -82,21 +64,22 @@ class _FoodMenuListState extends State<FoodMenuList> {
     return Card(
       margin: const EdgeInsets.fromLTRB(16.0, 16.0, 16.0, 0),
       child: Padding(
-          padding: const EdgeInsets.all(12.0),
+          padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 14.0),
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
             children: <Widget>[
               Text(
                 menu.title,
                 style: const TextStyle(
                   fontSize: 18.0,
-                  color: Colors.grey,
+                  color: Color.fromARGB(255, 77, 62, 62),
                 ),
               ),
               const SizedBox(height: 6.0),
               Text(
                 menu.reviews,
                 style: const TextStyle(
-                  fontSize: 14.0,
+                  fontSize: 16.0,
                   color: Colors.grey,
                 ),
               ),
