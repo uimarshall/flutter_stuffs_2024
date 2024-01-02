@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_stuffs_2024/splash_screen/splash_screen.dart';
 import 'package:flutter_stuffs_2024/timer/choose_location.dart';
 // import 'package:flutter_stuffs_2024/lists/food_menu_list.dart';
 import 'package:flutter_stuffs_2024/timer/home.dart';
@@ -17,19 +18,19 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      // home: Home(),
-      initialRoute:
-          '/', // default route to the home page, the first page that will be displayed when the app is launched
+      home: SplashScreen(),
+      // initialRoute:
+      //     '/', // default route to the home page, the first page that will be displayed when the app is launched
       // routing (routes are Maps and the keys are the route names and the values are the Screens we want to navigate to)
       // 'context' helps us to keep track of where we are in the widget tree
-      routes: {
-        '/': (context) => const Loading(),
-        '/home': (context) => const Home(),
-        '/location': (context) => const ChooseLocation(),
-      },
+      // routes: {
+      //   '/': (context) => const Loading(),
+      //   '/home': (context) => const Home(),
+      //   '/location': (context) => const ChooseLocation(),
+      // },
     );
   }
 }
