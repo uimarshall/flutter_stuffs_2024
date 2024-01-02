@@ -17,18 +17,18 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      home: Home(),
+      // home: Home(),
       initialRoute:
-          '/home', // default route to the home page, the first page that will be displayed when the app is launched
+          '/', // default route to the home page, the first page that will be displayed when the app is launched
       // routing (routes are Maps and the keys are the route names and the values are the Screens we want to navigate to)
       // 'context' helps us to keep track of where we are in the widget tree
       routes: {
-        // '/': (context) => Loading(),
-        // '/home': (context) => const Home(),
-        // '/location': (context) => const ChooseLocation(),
+        '/': (context) => const Loading(),
+        '/home': (context) => const Home(),
+        '/location': (context) => const ChooseLocation(),
       },
     );
   }
