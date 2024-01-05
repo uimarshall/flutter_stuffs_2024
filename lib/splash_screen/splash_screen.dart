@@ -71,7 +71,10 @@ class HomeScren extends StatelessWidget {
         centerTitle: true,
       ),
       body: const Center(
-        child: Text("Welcome to the App!"),
+        child: Text(
+          "Welcome to the App!",
+          style: TextStyle(fontFamily: 'IndieFlower', fontSize: 30.0),
+        ),
       ),
     );
   }
