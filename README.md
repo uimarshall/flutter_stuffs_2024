@@ -210,3 +210,208 @@ class _MyWidgetState extends State<MyWidget> {
 2. The state object which we can use to store data or define data.
 
 > In the future when we use the MyWidget widget, it will return the widget tree defined in the build method of the state object.
+
+[Creating responsive and adaptive apps](https://docs.flutter.dev/ui/layout/responsive/adaptive-responsive)
+
+## SOME RESPONSIVE WIDGETS IN FLUTTER
+
+> MediaQuery
+> LayoutBuilder
+> OrientationBuilder
+> SafeArea
+> AspectRatio
+> Flexible
+> Expanded
+> FractionalSizedBox
+
+### Media Query
+
+> Includes the media query data
+> Returns info about the app's window such as the `screenWidth`, `screenHeight` and `orientation`.
+
+```
+double screenWidth = MediaQuery.of(context).size.width
+double screenHeight = MediaQuery.of(context).size.height
+
+```
+
+Based on the screen sizes and orientation, we can control the responsive UI.
+
+## HOW TO USE MEDIA QUERY
+
+`Examples`
+
+> If you want to cover half of the screen width or height:
+
+```
+double screenWidth = MediaQuery.of(context).size.width/2
+double screenHeight = MediaQuery.of(context).size.height/2
+
+```
+
+> If you want to cover 40% of the screen width
+
+```
+double screenWidth = MediaQuery.of(context).size.width * 0.4
+```
+
+### SafeArea
+
+Be mindful of widgets such as status bar, notches, navigation bar etc.
+
+It is basically a padding widget, would add padding around the app, as required.
+
+The SafeArea widget in Flutter is used to ensure that its child is not blocked by system-level UI elements such as the `status bar`, `notch`, and `bottom navigation bar`. It provides padding to its child to keep it within the safe area of the screen.
+
+> Screens are not often rectangular, sometimes they have rounded corners, notch at the status or nav bar and impair the text, to make the text clearly seen, we use safe area.
+>
+> Sometimes, some Widgets have default padding that does not make our UI looks great. We use SafeArea to make it looks well and override the default padding.
+
+```
+
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text('SafeArea Example'),
+        ),
+        body: SafeArea(
+          child: Center(
+            child: Text('This text is within the safe area'),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+```
+
+### FractionallySizedBox
+
+`FractionallySizedBox` is a widget in Flutter that sizes its child to a fraction of the available space. It is commonly used to create responsive layouts in Flutter applications.
+
+```
+FractionallySizedBox(
+  widthFactor: 0.5, // takes up 50% of the available width
+  heightFactor: 0.3, // takes up 30% of the available height
+  child: ElevatedButton(
+    child: Text('Login'),
+  ),
+)
+
+```
+
+Use `FractionallySizedBox` if you want the following:
+
+> Relative sizes (e.g. 70% and not 300px) - takes 70% of the app's width, or you can say, the margin should take 70% of a widget.
+>
+> Wrap the child you want sized inside a `FractionallySizedBox`.
+
+### Expanded & Flexible Widget
+
+> The Expanded widget in Flutter is used to expand a child widget to fill the available space within its parent widget along the main axis. It is commonly used within a Row, Column, or Flex widget to specify how much space a child widget should occupy within the available space.
+
+```
+Row(
+  children: <Widget>[
+    Expanded(
+      child: Container(
+        color: Colors.red,
+        height: 100,
+      ),
+    ),
+    Expanded(
+      child: Container(
+        color: Colors.blue,
+        height: 100,
+      ),
+    ),
+    Expanded(
+      child: Container(
+        color: Colors.green,
+        height: 100,
+      ),
+    ),
+  ],
+)
+
+```
+
+> This code creates a Row with three containers, each wrapped in an Expanded widget. The Expanded widget allows each container to occupy an equal amount of space within the Row
+
+### Flexible Widget
+
+> Flexible does not require the child to fill the available space of the parent container.
+
+> The Flexible widget in Flutter is used to create a flexible space in a Flex container. It allows its child to flexibly expand to fill the available space in the main axis of the Flex container.
+
+```
+Row(
+  children: <Widget>[
+    Container(
+      color: Colors.blue,
+      height: 100,
+      width: 100,
+    ),
+    Flexible(
+      flex: 2,
+      child: Container(
+        color: Colors.red,
+        height: 100,
+      ),
+    ),
+    Container(
+      color: Colors.green,
+      height: 100,
+      width: 100,
+    ),
+  ],
+)
+
+```
+
+## Handling Portrait and Landscape Orientations
+
+> Orientation builder
+>
+> Change the UI based on the orientation of the parent widget.
+
+> OrientationBuilder is a widget in Flutter that allows you to build a widget tree based on the orientation of the device. This means that you can customize the UI based on whether the device is in portrait or landscape mode.
+
+```
+OrientationBuilder(
+  builder: (BuildContext context, Orientation orientation) {
+    // Return a widget tree based on the orientation
+    return Container(
+      child: Text(
+        'Device is in $orientation mode',
+        style: TextStyle(fontSize: 20),
+      ),
+    );
+  },
+)
+
+
+// Example 2
+
+OrientationBuilder(
+  builder: (context, orientation) {
+    return GridView.count(
+      // Create a grid with 2 cols in portrait mode
+      // or 3 cols in landscape mode
+      crossAxisCount: orientation == Orientation.portrait ? 2:3,
+    );
+  },
+)
+
+
+```
