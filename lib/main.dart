@@ -44,7 +44,7 @@ class MyApp extends StatelessWidget {
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       // home: const LoginPage(),
-      // home: const LoginFormStyles(),
+      home: const LoginFormStyles(),
       // home: const MediaQueryResponsiveDesign(),
       // home: const MySafeArea(),
       // home: const MyFractionallySizedBox(),
@@ -55,7 +55,7 @@ class MyApp extends StatelessWidget {
       // home: const ExpandedRowEqualWidth()
       // home: const FlexibleWidget(),
       // home: const MyOrientationDemo(),
-      home: const OrientationPortraitLandScape(),
+      // home: const OrientationPortraitLandScape(),
 
       // initialRoute:
       //     '/', // default route to the home page, the first page that will be displayed when the app is launched

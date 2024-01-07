@@ -41,7 +41,7 @@ class _LoginFormStylesState extends State<LoginFormStyles> {
       appBar: AppBar(
         title: const Text("Flutter TextFormFields"),
       ),
-      body: buildTextFields(),
+      body: SingleChildScrollView(child: buildTextFields()),
     );
   }
 
