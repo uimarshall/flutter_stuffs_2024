@@ -37,12 +37,16 @@ class MyApp extends StatelessWidget {
       // darkTheme: TAppThemeData.darkTheme,
 
       title: 'Flutter Demo',
-      theme: ThemeData(
-        textTheme:
-            GoogleFonts.josefinSansTextTheme(Theme.of(context).textTheme),
-        primarySwatch: Colors.blue,
-        visualDensity: VisualDensity.adaptivePlatformDensity,
-      ),
+      theme: TAppThemeData.lightTheme,
+      darkTheme: TAppThemeData.darkTheme,
+
+      // theme: ThemeData(
+      //   textTheme:
+      //       GoogleFonts.josefinSansTextTheme(Theme.of(context).textTheme),
+      //   primarySwatch: Colors.blue,
+      //   visualDensity: VisualDensity.adaptivePlatformDensity,
+      // ),
+      // darkTheme: ThemeData.dark(),
       // home: const LoginPage(),
       home: const LoginFormStyles(),
       // home: const MediaQueryResponsiveDesign(),
