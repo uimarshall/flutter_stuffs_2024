@@ -7,6 +7,7 @@ import 'package:flutter_stuffs_2024/responsiveness/safe_area.dart';
 import 'package:flutter_stuffs_2024/responsiveness/fractionally_sized_box.dart';
 import 'package:flutter_stuffs_2024/screens/login_form_styles.dart';
 import 'package:flutter_stuffs_2024/screens/responsive_design.dart';
+import 'package:flutter_stuffs_2024/shared/search_bar.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter_stuffs_2024/splash_screen/splash_screen.dart';
 // import 'package:flutter_stuffs_2024/lists/food_menu_list.dart';
@@ -48,7 +49,7 @@ class MyApp extends StatelessWidget {
       // ),
       // darkTheme: ThemeData.dark(),
       // home: const LoginPage(),
-      home: const LoginFormStyles(),
+      // home: const LoginFormStyles(),
       // home: const MediaQueryResponsiveDesign(),
       // home: const MySafeArea(),
       // home: const MyFractionallySizedBox(),
@@ -60,6 +61,7 @@ class MyApp extends StatelessWidget {
       // home: const FlexibleWidget(),
       // home: const MyOrientationDemo(),
       // home: const OrientationPortraitLandScape(),
+      home: SearchBarScreen(),
 
       // initialRoute:
       //     '/', // default route to the home page, the first page that will be displayed when the app is launched
