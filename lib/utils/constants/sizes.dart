@@ -59,4 +59,9 @@ class TSizes {
   static const double buttonSizeMD = 48.0;
   static const double buttonSizeLG = 56.0;
   static const double buttonSizeXL = 120.0;
+
+  // App bar height
+
+  static const double appBarHeight = 56.0;
+  static const double defaultSpace = 60.0;
 }
