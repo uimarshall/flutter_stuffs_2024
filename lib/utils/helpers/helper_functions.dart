@@ -103,4 +103,50 @@ class THelperFunctions {
   static double screenWidth() {
     return screenSize().width;
   }
+
+// TODO: Revisit the date formatting
+  static String getFormattedDate(DateTime date,
+      {String format = 'dd MMM yyyy'}) {
+    return DateFormat(format).format(date);
+  }
+
+  static String getFormattedTime(DateTime date, {String format = 'hh:mm a'}) {
+    return DateFormat(format).format(date);
+  }
+
+  static String getFormattedDateTime(DateTime date,
+      {String format = 'dd MMM yyyy hh:mm a'}) {
+    return DateFormat(format).format(date);
+  }
+
+  static String getFormattedDateTimeFromTimestamp(int timestamp,
+      {String format = 'dd MMM yyyy hh:mm a'}) {
+    return DateFormat(format)
+        .format(DateTime.fromMillisecondsSinceEpoch(timestamp));
+  }
+
+  static List<T> removeDuplicates<T>(List<T> list) {
+    return list.toSet().toList();
+  }
+
+  // static List<T> removeDuplicates<T>(List<T> list) {
+  //   final Set<T> set = {};
+  //   final List<T> newList = [];
+  //   for (final T element in list) {
+  //     if (!set.contains(element)) {
+  //       newList.add(element);
+  //       set.add(element);
+  //     }
+  //   }
+  //   return newList;
+  // }
+  static List<Widget> wrapWidgets(List<Widget> widgets, int rowSize) {
+    final wrappedWidgets = <Widget>[];
+    for (int i = 0; i < widgets.length; i += rowSize) {
+      final rowChildren = widgets.sublist(
+          i, i + rowSize > widgets.length ? widgets.length : i + rowSize);
+      wrappedWidgets.add(Row(children: rowChildren));
+    }
+    return wrappedWidgets;
+  }
 }
