@@ -15,9 +15,9 @@ class TImages {
   static const String pinterest = 'assets/images/pinterest.png';
 
   // Onboarding images
-  static const String onboarding1 = 'assets/images/onboarding1.png';
-  static const String onboarding2 = 'assets/images/onboarding2.png';
-  static const String onboarding3 = 'assets/images/onboarding3.png';
+  static const String onboarding1 = 'assets/images/onboarding1.jpg';
+  static const String onboarding2 = 'assets/images/onboarding2.jpg';
+  static const String onboarding3 = 'assets/images/onboarding3.jpg';
 
   // Image paths
   static const String logo = 'assets/images/logo.png';
