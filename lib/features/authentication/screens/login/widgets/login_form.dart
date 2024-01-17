@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_stuffs_2024/features/authentication/screens/signup/signup.dart';
 import 'package:flutter_stuffs_2024/utils/constants/sizes.dart';
 import 'package:flutter_stuffs_2024/utils/constants/text_strings.dart';
+import 'package:get/get.dart';
 
 class LoginForm extends StatelessWidget {
   const LoginForm({
@@ -142,7 +144,7 @@ class LoginForm extends StatelessWidget {
               children: [
                 const Text(TTexts.dontHaveAnAccount),
                 OutlinedButton(
-                  onPressed: () {},
+                  onPressed: () => Get.to(() => const SignUp()),
                   child: const Text(TTexts.signUp),
                 ),
               ],

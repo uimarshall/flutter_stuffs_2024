@@ -58,6 +58,8 @@ class TTexts {
   static const String confirmPassword = 'Confirm Password';
   static const String firstName = 'First Name';
   static const String lastName = 'Last Name';
+  static const String fullName = 'Full Name';
+  static const String username = 'Username';
   static const String phoneNumber = 'Phone Number';
   static const String otp = 'OTP';
   static const String resendOtp = 'Resend OTP';
@@ -81,10 +83,12 @@ class TTexts {
   static const String alreadyHaveAnAccount = 'Already have an account?';
   static const String dontHaveAnAccount = "Don't have an account?";
   static const String rememberMe = 'Remember me';
-  static const String iAgreeTo = 'I agree to';
+  static const String iAgreeTo = 'I agree to ';
+  static const String and = ' and ';
   static const String termsOfService = 'Terms of Service';
   static const String privacyPolicy = 'Privacy Policy';
   static const String termsOfUse = 'Terms of Use';
+  static const String termsAndConditions = 'Terms and Conditions';
   static const String verificationCode = 'Verification Code';
   static const String resendEmail = 'Resend Email';
   static const String resendEmailSuccessTitle = 'Email resent successfully!.';
