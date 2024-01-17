@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_stuffs_2024/features/authentication/onboarding_screens/onboarding.dart';
+import 'package:flutter_stuffs_2024/search/search_page.dart';
 import 'package:flutter_stuffs_2024/utils/theme/theme.dart';
 import 'package:get/get.dart';
 
@@ -17,7 +18,8 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: TAppThemeData.lightTheme,
       darkTheme: TAppThemeData.darkTheme,
-      home: const OnboardingScreen(),
+      // home: const OnboardingScreen(),
+      home: const SearchPage(),
     );
   }
 }
