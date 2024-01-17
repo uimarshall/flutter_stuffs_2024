@@ -18,8 +18,8 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: TAppThemeData.lightTheme,
       darkTheme: TAppThemeData.darkTheme,
-      // home: const OnboardingScreen(),
-      home: const SearchPage(),
+      home: const OnboardingScreen(),
+      // home: const SearchPage(),
     );
   }
 }

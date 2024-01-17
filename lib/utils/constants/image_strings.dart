@@ -6,7 +6,7 @@ class TImages {
   // social logos
   static const String facebook = 'assets/images/facebook.png';
   static const String google = 'assets/images/google.png';
-  static const String twitter = 'assets/images/twitter.png';
+  static const String twitterLight = 'assets/images/twitter.png';
   static const String twitterDark = 'assets/images/twitter1.png';
   static const String linkedin = 'assets/images/linkedin.png';
   static const String github = 'assets/images/github.png';

@@ -83,5 +83,37 @@ class TSizes {
   static const double defaultSpaceXXL = 48.0;
   static const double defaultSpaceXXXL = 64.0;
   static const double spaceBetweenItems = 16.0;
+  static const double spaceBetweenItemsSM = 8.0;
   static const double spaceBetweenSections = 32.0;
+
+  // Divider height
+  static const double dividerHeight = 1.0;
+
+  // Product item dimensions
+  static const double productImageSize = 120.0;
+  static const double productImageHeight = 160.0;
+  static const double productImageRadius = 16.0;
+
+  // Input field
+
+  static const double inputFieldRadius = 12.0;
+  static const double spaceBetweenInputField = 16.0;
+
+  // Card Sizes
+
+  static const double cardRadiusLg = 16.0;
+  static const double cardRadiusMd = 12.0;
+  static const double cardRadiusSm = 8.0;
+  static const double cardRadiusXs = 6.0;
+  static const double cardRadiusXxs = 4.0;
+  static const double cardElevation = 2.0;
+
+  // Image carousel height
+  static const double imageCarouselHeight = 240.0;
+
+  // Loading indicator size
+  static const double loadingIndicatorSize = 24.0;
+
+  // Grid view spacing
+  static const double gridViewSpacing = 16.0;
 }
