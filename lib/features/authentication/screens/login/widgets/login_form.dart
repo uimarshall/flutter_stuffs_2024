@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_stuffs_2024/features/authentication/screens/signup/signup.dart';
+import 'package:flutter_stuffs_2024/navigation_menu.dart';
 import 'package:flutter_stuffs_2024/utils/constants/sizes.dart';
 import 'package:flutter_stuffs_2024/utils/constants/text_strings.dart';
 import 'package:get/get.dart';
@@ -130,7 +131,7 @@ class LoginForm extends StatelessWidget {
               width: double
                   .infinity, // this means the button will take the full width of the screen
               child: ElevatedButton(
-                onPressed: () {},
+                onPressed: () => Get.to(() => const NavigationMenu()),
                 child: const Text(TTexts.signIn),
               ),
             ),
