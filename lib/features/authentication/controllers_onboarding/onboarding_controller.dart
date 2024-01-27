@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_stuffs_2024/features/authentication/screens/login/login.dart';
-import 'package:flutter_stuffs_2024/features/shop/screens/home/home_screen.dart';
 
-import 'package:flutter_stuffs_2024/screens/login_form_styles.dart';
 import 'package:get/get.dart';
 
 class OnboardingController extends GetxController {

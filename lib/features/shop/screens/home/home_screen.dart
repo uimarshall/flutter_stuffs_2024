@@ -1,12 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_stuffs_2024/shared/widgets/custom_shapes/containers/circular_container.dart';
+import 'package:flutter_stuffs_2024/features/shop/screens/home/widgets/home_app_bar.dart';
+import 'package:flutter_stuffs_2024/shared/widgets/appbar/app_bar.dart';
+
 import 'package:flutter_stuffs_2024/shared/widgets/custom_shapes/containers/primary_header_container.dart';
-import 'package:flutter_stuffs_2024/shared/widgets/custom_shapes/curved_edges/curved_edges.dart';
-import 'package:flutter_stuffs_2024/shared/widgets/custom_shapes/curved_edges/curved_edges_widget.dart';
+import 'package:flutter_stuffs_2024/shared/widgets/products.cart/cart_menu_badge.dart';
 import 'package:flutter_stuffs_2024/utils/constants/colors.dart';
+import 'package:flutter_stuffs_2024/utils/constants/text_strings.dart';
 
 class HomeScreen extends StatelessWidget {
-  const HomeScreen({super.key});
+  const HomeScreen({
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +21,11 @@ class HomeScreen extends StatelessWidget {
           children: [
             // Add custom shape to the container by wrapping it with a ClipPath Widget.
             TPrimaryHeaderContainer(
-              child: Column(children: []),
+              child: Column(children: [
+                THomeAppBar(),
+                // Add a search bar
+                // TSearchBar(),
+              ]),
             )
           ],
         ),
