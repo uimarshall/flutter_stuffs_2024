@@ -3,6 +3,7 @@ import 'dart:io';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:get/get.dart';
 
 class TDeviceUtils {
   static void hideKeyboard(BuildContext context) {
@@ -151,16 +152,22 @@ class TDeviceUtils {
     return kBottomNavigationBarHeight;
   }
 
-  static double getAppBarHeight(BuildContext context) {
+  static double getAppBarHeight() {
     return kToolbarHeight;
   }
+  // static double getAppBarHeight(BuildContext context) {
+  //   return kToolbarHeight;
+  // }
 
-  static double getKeyboardHeight(BuildContext context) {
-    return MediaQuery.of(context).viewInsets.bottom;
+  static double getKeyboardHeight() {
+    return MediaQuery.of(Get.context!).viewInsets.bottom;
   }
+  // static double getKeyboardHeight(BuildContext context) {
+  //   return MediaQuery.of(context).viewInsets.bottom;
+  // }
 
-  static Future<bool> isKeyboardVisible(BuildContext context) async {
-    return MediaQuery.of(context).viewInsets.bottom > 0;
+  static Future<bool> isKeyboardVisible() async {
+    return View.of(Get.context!).viewInsets.bottom > 0;
   }
 
   static Future<bool> isPhysicalDevice() async {
