@@ -64,4 +64,13 @@ class TImages {
       'assets/images/logo_text_white_accent.png';
   static const String logoTextWhiteAccentDark =
       'assets/images/logo_text_white_accent_dark.png';
+
+  // Category images
+  static const String bedIcon = 'assets/images/bed.jpg';
+  static const String centerTableIcon = 'assets/images/centre-table-1.jpg';
+  static const String chairIcon = 'assets/images/chair-2.jpg';
+  static const String diningTableIcon = 'assets/images/dining-table.jpg';
+  static const String discTableIcon = 'assets/icons/disc-player.jpg';
+  static const String fridgeIcon = 'assets/images/fridge.jpg';
+  static const String shoe = 'assets/images/shoe-1.jpg';
 }
