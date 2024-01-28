@@ -15,3 +15,5 @@ https://www.youtube.com/watch?v=3ba980M2fUA
 [Error: Dart library 'dart:js_interop' is not available on this platform](https://stackoverflow.com/questions/77139916/error-dart-library-dartjs-interop-is-not-available-on-this-platform)
 
 [Error: Not found: 'dart:js' import 'dart:js';](https://stackoverflow.com/questions/77139916/error-dart-library-dartjs-interop-is-not-available-on-this-platform)
+
+[How to solve Android error: Could not find method implementation() for arguments on object of type org.gradle.api.internal.artifacts.dsl.dependencies.DefaultDependencyHandler](https://ourcodeworld.com/articles/read/1590/how-to-solve-android-error-could-not-find-method-implementation-for-arguments-on-object-of-type-orggradleapiinternalartifactsdsldependenciesdefaultdependencyhandler)
