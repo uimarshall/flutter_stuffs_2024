@@ -11,47 +11,52 @@ class TSearchContainer extends StatelessWidget {
     this.icon = Icons.search,
     this.showBorder = true,
     this.showBackgroundColor = true,
+    this.onTap,
   });
   final String text;
   final IconData? icon;
   final bool showBackgroundColor, showBorder;
+  final VoidCallback? onTap;
 
   @override
   Widget build(BuildContext context) {
     final dark = THelperFunctions.isDarkMode(context);
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: TSizes.defaultSpace),
-      child: Container(
-        width: TDeviceUtils.getDeviceWidth(context),
-        padding: const EdgeInsets.all(TSizes.md),
-        decoration: BoxDecoration(
-          color: showBackgroundColor
-              ? dark
-                  ? TColors.dark
-                  : TColors.light
-              : Colors.transparent,
-          borderRadius: BorderRadius.circular(TSizes.cardRadiusLg),
-          border: showBorder
-              ? Border.all(
-                  color: TColors.white,
-                  width: 2, //this is the thickness of the border
-                )
-              : null,
-        ),
-        child: Row(
-          children: [
-            Icon(
-              icon,
-              color: TColors.darkGrey,
-            ),
-            const SizedBox(
-              width: TSizes.spaceBetweenItems,
-            ),
-            Text(
-              text,
-              style: Theme.of(context).textTheme.bodySmall,
-            )
-          ],
+    return GestureDetector(
+      onTap: onTap,
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: TSizes.defaultSpace),
+        child: Container(
+          width: TDeviceUtils.getDeviceWidth(context),
+          padding: const EdgeInsets.all(TSizes.md),
+          decoration: BoxDecoration(
+            color: showBackgroundColor
+                ? dark
+                    ? TColors.dark
+                    : TColors.light
+                : Colors.transparent,
+            borderRadius: BorderRadius.circular(TSizes.cardRadiusLg),
+            border: showBorder
+                ? Border.all(
+                    color: TColors.white,
+                    width: 2, //this is the thickness of the border
+                  )
+                : null,
+          ),
+          child: Row(
+            children: [
+              Icon(
+                icon,
+                color: TColors.darkGrey,
+              ),
+              const SizedBox(
+                width: TSizes.spaceBetweenItems,
+              ),
+              Text(
+                text,
+                style: Theme.of(context).textTheme.bodySmall,
+              )
+            ],
+          ),
         ),
       ),
     );
