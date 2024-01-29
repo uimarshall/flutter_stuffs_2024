@@ -73,4 +73,8 @@ class TImages {
   static const String discTableIcon = 'assets/icons/disc-player.jpg';
   static const String fridgeIcon = 'assets/images/fridge.jpg';
   static const String shoe = 'assets/images/shoe-1.jpg';
+  // Promo Banners
+  static const String promoBanner1 = 'assets/images/centre-table-1.jpg';
+  static const String promoBanner2 = 'assets/images/centre-table.jpg';
+  static const String promoBanner3 = 'assets/images/chair-3.jpg';
 }
