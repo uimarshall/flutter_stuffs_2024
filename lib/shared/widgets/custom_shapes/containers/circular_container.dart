@@ -9,6 +9,7 @@ class TCircularContainer extends StatelessWidget {
     this.radius =
         400, //No need to put required because we are passing default values
     this.padding = 0,
+    this.margin,
     this.child,
     this.backgroundColor = TColors.white,
   });
@@ -18,6 +19,7 @@ class TCircularContainer extends StatelessWidget {
   final double? height;
   final double radius;
   final double padding;
+  final EdgeInsets? margin;
   final Widget? child; // If you want to add any child widget.
   final Color backgroundColor;
 
@@ -27,6 +29,7 @@ class TCircularContainer extends StatelessWidget {
       height: height,
       width: width,
       padding: EdgeInsets.all(padding),
+      margin: margin,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(
             radius), //we have to give the same value as the height and width of the container for the background image to be a circle or give a higher value than 400.
