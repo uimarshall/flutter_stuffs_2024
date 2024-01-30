@@ -11,6 +11,7 @@ import 'package:flutter_stuffs_2024/shared/widgets/custom_shapes/containers/sear
 import 'package:flutter_stuffs_2024/shared/widgets/image_text_widgets/vertical_image_text.dart';
 import 'package:flutter_stuffs_2024/shared/widgets/images/t_rounded_image.dart';
 import 'package:flutter_stuffs_2024/shared/widgets/products.cart/cart_menu_badge.dart';
+import 'package:flutter_stuffs_2024/shared/widgets/products/product_cards/product_card_vertical.dart';
 import 'package:flutter_stuffs_2024/shared/widgets/texts/section_heading.dart';
 import 'package:flutter_stuffs_2024/utils/constants/colors.dart';
 import 'package:flutter_stuffs_2024/utils/constants/image_strings.dart';
@@ -64,11 +65,19 @@ class HomeScreen extends StatelessWidget {
             // Body section of home page
             Padding(
               padding: EdgeInsets.all(TSizes.defaultSpace),
-              child: TPromoCarouselSlider(
-                banners: [
-                  TImages.promoBanner1,
-                  TImages.promoBanner2,
-                  TImages.promoBanner3
+              child: Column(
+                children: [
+                  // Promo Slider
+                  TPromoCarouselSlider(
+                    banners: [
+                      TImages.promoBanner1,
+                      TImages.promoBanner2,
+                      TImages.promoBanner3
+                    ],
+                  ),
+                  SizedBox(height: TSizes.spaceBetweenSections),
+                  // Featured Popular Products
+                  TProductCardVertical()
                 ],
               ),
             )
