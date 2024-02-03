@@ -35,14 +35,15 @@ class THomeAppBar extends StatelessWidget {
       // showBackArrow: true,
       actions: [
         IconButton(
+          onPressed: () {},
           icon: const Icon(
             Icons.search,
             color: TColors.white,
           ),
-          onPressed: () {},
         ),
         TCardCounterBadge(
           onPressed: () {},
+          iconColor: TColors.white,
         ),
       ],
     );

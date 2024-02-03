@@ -10,7 +10,9 @@ import 'package:flutter_stuffs_2024/shared/widgets/custom_shapes/containers/prim
 import 'package:flutter_stuffs_2024/shared/widgets/custom_shapes/containers/search_container.dart';
 import 'package:flutter_stuffs_2024/shared/widgets/image_text_widgets/vertical_image_text.dart';
 import 'package:flutter_stuffs_2024/shared/widgets/images/t_rounded_image.dart';
+import 'package:flutter_stuffs_2024/shared/widgets/layouts/grid_layout.dart';
 import 'package:flutter_stuffs_2024/shared/widgets/products.cart/cart_menu_badge.dart';
+import 'package:flutter_stuffs_2024/shared/widgets/products/product_cards/product_card_vertical.dart';
 import 'package:flutter_stuffs_2024/shared/widgets/texts/section_heading.dart';
 import 'package:flutter_stuffs_2024/utils/constants/colors.dart';
 import 'package:flutter_stuffs_2024/utils/constants/image_strings.dart';
@@ -27,13 +29,13 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       body: SingleChildScrollView(
         // We use col because the elements will be aligned on the from top to bottom and scrollable
         child: Column(
           children: [
             // Add custom shape to the container by wrapping it with a ClipPath Widget.
-            TPrimaryHeaderContainer(
+            const TPrimaryHeaderContainer(
               child: Column(children: [
                 THomeAppBar(),
                 SizedBox(height: TSizes.spaceBetweenSections),
@@ -63,12 +65,24 @@ class HomeScreen extends StatelessWidget {
             ),
             // Body section of home page
             Padding(
-              padding: EdgeInsets.all(TSizes.defaultSpace),
-              child: TPromoCarouselSlider(
-                banners: [
-                  TImages.promoBanner1,
-                  TImages.promoBanner2,
-                  TImages.promoBanner3
+              padding: const EdgeInsets.all(TSizes.defaultSpace),
+              child: Column(
+                children: [
+                  // Promo Slider
+                  const TPromoCarouselSlider(
+                    banners: [
+                      TImages.promoBanner1,
+                      TImages.promoBanner2,
+                      TImages.promoBanner3
+                    ],
+                  ),
+                  const SizedBox(height: TSizes.spaceBetweenSections),
+                  // Featured Popular Products
+                  TGridLayout(
+                    itemCount: 4,
+                    mainAxisExtent: 288,
+                    itemBuilder: (_, index) => const TProductCardVertical(),
+                  ),
                 ],
               ),
             )

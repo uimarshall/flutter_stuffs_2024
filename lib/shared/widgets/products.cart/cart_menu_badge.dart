@@ -5,16 +5,16 @@ class TCardCounterBadge extends StatelessWidget {
   const TCardCounterBadge({
     super.key,
     required this.onPressed,
-    this.iconColor,
+    required this.iconColor,
   });
   final VoidCallback onPressed;
-  final Color? iconColor;
+  final Color iconColor;
   @override
   Widget build(BuildContext context) {
     return Stack(
       children: [
         IconButton(
-          icon: Icon(Icons.shopping_cart, color: iconColor ?? TColors.white),
+          icon: Icon(Icons.shopping_cart, color: iconColor),
           onPressed: onPressed,
         ),
         Positioned(
@@ -32,7 +32,7 @@ class TCardCounterBadge extends StatelessWidget {
                 '2',
                 style: Theme.of(context)
                     .textTheme
-                    .bodySmall!
+                    .labelLarge!
                     .apply(color: TColors.white, fontSizeFactor: 1),
               ),
             ),
