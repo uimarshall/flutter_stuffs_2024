@@ -3,6 +3,7 @@ import 'package:flutter_stuffs_2024/shared/styles/shadows.dart';
 import 'package:flutter_stuffs_2024/shared/widgets/custom_shapes/containers/rounded_container.dart';
 import 'package:flutter_stuffs_2024/shared/widgets/icons/t_circular_icon.dart';
 import 'package:flutter_stuffs_2024/shared/widgets/images/t_rounded_image.dart';
+import 'package:flutter_stuffs_2024/shared/widgets/products/product_cards/product_price_text.dart';
 import 'package:flutter_stuffs_2024/shared/widgets/texts/product_title_text.dart';
 import 'package:flutter_stuffs_2024/utils/constants/colors.dart';
 import 'package:flutter_stuffs_2024/utils/constants/image_strings.dart';
@@ -120,11 +121,8 @@ class TProductCardVertical extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       // Price
-                      Text(
-                        '\$ 120',
-                        maxLines: 1,
-                        overflow: TextOverflow.ellipsis,
-                        style: Theme.of(context).textTheme.headlineMedium,
+                      const TProductPriceText(
+                        price: '120',
                       ),
                       const SizedBox(width: TSizes.sm),
                       // Previous Price
@@ -135,10 +133,8 @@ class TProductCardVertical extends StatelessWidget {
                             .labelMedium!
                             .apply(decoration: TextDecoration.lineThrough),
                       ),
+                      // Add to cart Button
                       Container(
-                          margin: const EdgeInsets.only(left: TSizes.sm),
-                          padding: const EdgeInsets.symmetric(
-                              horizontal: TSizes.xs, vertical: TSizes.xs),
                           decoration: const BoxDecoration(
                             color: TColors.dark,
                             borderRadius: BorderRadius.only(
