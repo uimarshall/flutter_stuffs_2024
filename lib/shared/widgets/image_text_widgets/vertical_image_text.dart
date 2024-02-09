@@ -9,7 +9,7 @@ class TVerticalImageText extends StatelessWidget {
     required this.title,
     required this.image,
     this.textColor = TColors.white,
-    this.backgroundColor = TColors.white,
+    this.backgroundColor,
     this.onTap,
   });
 
@@ -35,7 +35,7 @@ class TVerticalImageText extends StatelessWidget {
                 color:
                     backgroundColor ?? // the ?? means if the background color is null then use the listed color
                         (THelperFunctions.isDarkMode(context)
-                            ? TColors.black
+                            ? TColors.darkGrey
                             : TColors.white),
                 borderRadius: BorderRadius.circular(100),
               ),
