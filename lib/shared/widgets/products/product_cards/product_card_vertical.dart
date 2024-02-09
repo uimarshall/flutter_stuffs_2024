@@ -5,6 +5,7 @@ import 'package:flutter_stuffs_2024/shared/widgets/icons/t_circular_icon.dart';
 import 'package:flutter_stuffs_2024/shared/widgets/images/t_rounded_image.dart';
 import 'package:flutter_stuffs_2024/shared/widgets/products/product_cards/product_price_text.dart';
 import 'package:flutter_stuffs_2024/shared/widgets/texts/product_title_text.dart';
+import 'package:flutter_stuffs_2024/shared/widgets/texts/t_brand_title_text_with_verified_icon.dart';
 import 'package:flutter_stuffs_2024/utils/constants/colors.dart';
 import 'package:flutter_stuffs_2024/utils/constants/image_strings.dart';
 import 'package:flutter_stuffs_2024/utils/constants/sizes.dart';
@@ -87,77 +88,66 @@ class TProductCardVertical extends StatelessWidget {
             const SizedBox(height: TSizes.spaceBetweenItems / 2),
 
             // Details
-            Padding(
-              padding: const EdgeInsets.only(left: TSizes.sm),
+            const Padding(
+              padding: EdgeInsets.only(left: TSizes.sm),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   // Product Name
-                  const TProductTitleText(
+                  TProductTitleText(
                     title: 'Nike Air Max 270',
                     isSmallSizeText: true,
                   ),
-                  const SizedBox(height: TSizes.spaceBetweenItems / 2),
-                  Row(
-                    children: [
-                      Text(
-                        'Nike',
-                        overflow: TextOverflow.ellipsis,
-                        maxLines: 1,
-                        style: Theme.of(context).textTheme.labelMedium,
-                      ),
-                      const SizedBox(width: TSizes.sm),
-                      const Icon(
-                        Icons.verified,
-                        color: TColors.primary,
-                        size: TSizes.iconSizeXS,
-                      ),
-                    ],
-                  ),
-                  // Make the cards be of equal size no matter the size of the text in the card
-                  // const Spacer(),
-
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      // Price
-                      const TProductPriceText(
-                        price: '120',
-                      ),
-                      const SizedBox(width: TSizes.sm),
-                      // Previous Price
-                      Text(
-                        '\$ 150',
-                        style: Theme.of(context)
-                            .textTheme
-                            .labelMedium!
-                            .apply(decoration: TextDecoration.lineThrough),
-                      ),
-                      // Add to cart Button
-                      Container(
-                          decoration: const BoxDecoration(
-                            color: TColors.dark,
-                            borderRadius: BorderRadius.only(
-                              topLeft: Radius.circular(TSizes.cardRadiusMd),
-                              bottomRight:
-                                  Radius.circular(TSizes.productImageRadius),
-                            ),
-                          ),
-                          child: const SizedBox(
-                            width: TSizes.iconSizeLG * 1.2,
-                            height: TSizes.iconSizeLG * 1.2,
-                            child: Center(
-                              child: Icon(
-                                Icons.add,
-                                color: TColors.white,
-                              ),
-                            ),
-                          )),
-                    ],
+                  SizedBox(height: TSizes.spaceBetweenItems / 2),
+                  TBrandTitleWithVerifiedIcon(
+                    title: 'Nike',
                   ),
                 ],
               ),
-            )
+            ),
+            // Make the cards be of equal size no matter the size of the text in the card
+            const Spacer(),
+
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                // Price
+                const Padding(
+                  padding: EdgeInsets.only(left: TSizes.sm),
+                  child: TProductPriceText(
+                    price: '120',
+                  ),
+                ),
+                const SizedBox(width: TSizes.sm),
+                // Previous Price
+                Text(
+                  '\$ 150',
+                  style: Theme.of(context)
+                      .textTheme
+                      .labelMedium!
+                      .apply(decoration: TextDecoration.lineThrough),
+                ),
+                // Add to cart Button
+                Container(
+                    decoration: const BoxDecoration(
+                      color: TColors.dark,
+                      borderRadius: BorderRadius.only(
+                        topLeft: Radius.circular(TSizes.cardRadiusMd),
+                        bottomRight: Radius.circular(TSizes.productImageRadius),
+                      ),
+                    ),
+                    child: const SizedBox(
+                      width: TSizes.iconSizeLG * 1.2,
+                      height: TSizes.iconSizeLG * 1.2,
+                      child: Center(
+                        child: Icon(
+                          Icons.add,
+                          color: TColors.white,
+                        ),
+                      ),
+                    )),
+              ],
+            ),
           ],
         ),
       ),

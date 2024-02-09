@@ -77,6 +77,14 @@ class HomeScreen extends StatelessWidget {
                     ],
                   ),
                   const SizedBox(height: TSizes.spaceBetweenSections),
+                  // Heading
+
+                  TSectionHeading(
+                      title: 'Popular Products',
+                      textColor: TColors.black,
+                      onPressed: () {}),
+
+                  const SizedBox(height: TSizes.spaceBetweenSections),
                   // Featured Popular Products
                   TGridLayout(
                     itemCount: 4,

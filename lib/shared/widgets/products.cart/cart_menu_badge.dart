@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_stuffs_2024/utils/constants/colors.dart';
 
-class TCardCounterBadge extends StatelessWidget {
-  const TCardCounterBadge({
+class TCartCounterBadge extends StatelessWidget {
+  const TCartCounterBadge({
     super.key,
     required this.onPressed,
     required this.iconColor,

@@ -41,7 +41,7 @@ class THomeAppBar extends StatelessWidget {
             color: TColors.white,
           ),
         ),
-        TCardCounterBadge(
+        TCartCounterBadge(
           onPressed: () {},
           iconColor: TColors.white,
         ),
