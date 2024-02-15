@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_stuffs_2024/features/personalization/screens/profile/profile.dart';
 import 'package:flutter_stuffs_2024/shared/widgets/appbar/app_bar.dart';
 import 'package:flutter_stuffs_2024/shared/widgets/custom_shapes/containers/primary_header_container.dart';
 import 'package:flutter_stuffs_2024/shared/widgets/images/t_circular_image.dart';
@@ -8,6 +9,7 @@ import 'package:flutter_stuffs_2024/shared/widgets/texts/section_heading.dart';
 import 'package:flutter_stuffs_2024/utils/constants/colors.dart';
 import 'package:flutter_stuffs_2024/utils/constants/image_strings.dart';
 import 'package:flutter_stuffs_2024/utils/constants/sizes.dart';
+import 'package:get/get.dart';
 
 class SettingsScreen extends StatelessWidget {
   const SettingsScreen({super.key});
@@ -31,7 +33,9 @@ class SettingsScreen extends StatelessWidget {
                           .apply(color: TColors.white))),
                 ),
                 // User profile card
-                const TUserProfileTile(),
+                TUserProfileTile(
+                  onPressed: () => Get.to(() => const ProfileScreen()),
+                ),
                 const SizedBox(height: TSizes.spaceBetweenSections),
               ],
             )),
