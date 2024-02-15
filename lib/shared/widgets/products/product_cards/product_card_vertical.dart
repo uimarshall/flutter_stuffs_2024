@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_stuffs_2024/features/shop/screens/product_details/product_detail.dart';
 import 'package:flutter_stuffs_2024/shared/styles/shadows.dart';
 import 'package:flutter_stuffs_2024/shared/widgets/custom_shapes/containers/rounded_container.dart';
 import 'package:flutter_stuffs_2024/shared/widgets/icons/t_circular_icon.dart';
@@ -10,6 +11,7 @@ import 'package:flutter_stuffs_2024/utils/constants/colors.dart';
 import 'package:flutter_stuffs_2024/utils/constants/image_strings.dart';
 import 'package:flutter_stuffs_2024/utils/constants/sizes.dart';
 import 'package:flutter_stuffs_2024/utils/helpers/helper_functions.dart';
+import 'package:get/get.dart';
 
 class TProductCardVertical extends StatelessWidget {
   const TProductCardVertical({
@@ -21,7 +23,7 @@ class TProductCardVertical extends StatelessWidget {
     final dark = THelperFunctions.isDarkMode(context);
     // Container with side paddings, color, edges, shadow and radius
     return GestureDetector(
-      onTap: () {},
+      onTap: () => Get.to(() => const ProductDetailScreen()),
       child: Container(
         width: 180,
         // margin: const EdgeInsets.symmetric(horizontal: 20),
