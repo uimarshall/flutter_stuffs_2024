@@ -60,7 +60,8 @@ class HomeScreen extends StatelessWidget {
                       THomeCategories(),
                     ],
                   ),
-                )
+                ),
+                SizedBox(height: TSizes.spaceBetweenSections),
               ]),
             ),
             // Body section of home page
