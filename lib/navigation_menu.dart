@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_stuffs_2024/features/personalization/screens/settings/settings.dart';
 import 'package:flutter_stuffs_2024/features/shop/screens/home/home_screen.dart';
 import 'package:flutter_stuffs_2024/features/shop/screens/store/store.dart';
 import 'package:flutter_stuffs_2024/features/shop/screens/wishlist/wish_list.dart';
@@ -69,7 +70,7 @@ class NavigationController extends GetxController {
     const HomeScreen(),
     const StoreScreen(),
     const FavouriteScreen(),
-    const Center(child: Text('Settings')),
+    const SettingsScreen(),
   ];
 }
 // class NavigationController extends ChangeNotifier {
